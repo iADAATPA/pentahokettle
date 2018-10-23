@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>tr_READ_PO_FILE</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;OPENDATA&#x2f;COMUN&#x2f;CKAN_PORTAL</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+         <slaveserver><name>localhost</name><hostname>localhost</hostname><port>8888</port><webAppName/><username/><password>Encrypted </password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master><sslMode>N</sslMode></slaveserver>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2018&#x2f;05&#x2f;21 11&#x3a;12&#x3a;16.000</created_date>
+  <modified_user>admin</modified_user>
+  <modified_date>2018&#x2f;06&#x2f;14 17&#x3a;40&#x3a;26.000</modified_date>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>DWHOPENDATA</name>
+    <server/>
+    <type>ORACLE</type>
+    <access>JNDI</access>
+    <database>DWHOPENDATA</database>
+    <port>1521</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>create_PO_file</from><to>Block this step until steps finish</to><enabled>Y</enabled> </hop>
+  <hop> <from>Block this step until steps finish</from><to>read_PO_file</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_1</from><to>js_extract_vals_to_trans</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_3</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_1</from><to>Sort rows 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 3</from><to>get_previous_fields</to><enabled>Y</enabled> </hop>
+  <hop> <from>get_previous_fields</from><to>filter_rows_2</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_2</from><to>js_extract_vals_to_trans_msgid 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_2</from><to>Sort rows 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 4</from><to>get_msgid_with_plural 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2</from><to>js_extract_vals_to_trans_plural</to><enabled>Y</enabled> </hop>
+  <hop> <from>get_msgid_with_plural 2</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>filter_rows_3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>get_variables</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>merge_rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>js_extract_vals_to_trans</from><to>merge_rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>js_extract_vals_to_trans_msgid 2</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>js_extract_vals_to_trans_plural</from><to>Select values 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sorted Merge</from><to>filter_empty_filtered_values</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_empty_filtered_values</from><to>Group by</to><enabled>Y</enabled> </hop>
+  <hop> <from>merge_rows</from><to>Sorted Merge</to><enabled>Y</enabled> </hop>
+  <hop> <from>Group by</from><to>Copy rows to result</to><enabled>Y</enabled> </hop>
+  <hop> <from>get_variables</from><to>js_form_pot_filename</to><enabled>Y</enabled> </hop>
+  <hop> <from>js_form_pot_filename</from><to>set_filename</to><enabled>Y</enabled> </hop>
+  <hop> <from>set_filename</from><to>create_PO_file</to><enabled>Y</enabled> </hop>
+  <hop> <from>read_PO_file</from><to>filter_rows_1</to><enabled>Y</enabled> </hop>
+  <hop> <from>get_msgid_with_plural 2 2</from><to>Select values 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 4</from><to>filter_rows_4</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_3</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>get_msgid_with_plural 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>js_extract_orig_content</from><to>insert_orig_values_db 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_4</from><to>db_write_not_filtered_vals</to><enabled>Y</enabled> </hop>
+  <hop> <from>filter_rows_4</from><to>js_extract_orig_content</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 3</from><to>Sorted Merge</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sorted Merge</from><to>insert_orig_values_db</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>Write to log</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Block this step until steps finish</name>
+    <type>BlockUntilStepsFinish</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <steps>
+      <step>
+        <name>create_PO_file</name>
+        <CopyNr>0</CopyNr>
+        </step>
+      </steps>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>592</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Copy rows to result</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1776</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get rows from result</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>languages</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group by</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+      </group>
+      <fields>
+        <field>
+          <aggregate>po_row</aggregate>
+          <subject>po_row</subject>
+          <type>CONCAT_STRING</type>
+          <valuefield>&#x23;&#x23;&#x23;</valuefield>
+        </field>
+        <field>
+          <aggregate>po_row_number</aggregate>
+          <subject>po_row_number</subject>
+          <type>CONCAT_STRING</type>
+          <valuefield>&#x23;&#x23;&#x23;</valuefield>
+        </field>
+        <field>
+          <aggregate>original_content</aggregate>
+          <subject>original_content</subject>
+          <type>CONCAT_STRING</type>
+          <valuefield>&#x23;&#x23;&#x23;</valuefield>
+        </field>
+        <field>
+          <aggregate>filtered_content</aggregate>
+          <subject>filtered_content</subject>
+          <type>CONCAT_STRING</type>
+          <valuefield>&#x23;&#x23;&#x23;</valuefield>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1680</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>msgid_singular</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>msgid_plural</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>po_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>po_row_number</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>912</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>po_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>po_row_number</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>original_content</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filtered_content</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1184</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>po_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>po_row_number</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>original_content</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filtered_content</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1296</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>msgid_singular</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>msgid_plural</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>po_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>po_row_number</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>1280</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>po_row_number</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>1088</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>po_row_number</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>976</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>po_row_number</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 4</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>po_row_number</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sorted Merge</name>
+    <type>SortedMerge</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>po_row_number</name>
+        <ascending>Y</ascending>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1440</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Write to log</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage>&#x2a;&#x2a;&#x2a; YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE &#x2a;&#x2a;&#x2a;</logmessage>
+    <fields>
+      <field>
+        <name>languages</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>create_PO_file</name>
+    <type>ProcessFiles</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <sourcefilenamefield>pot_filename</sourcefilenamefield>
+    <targetfilenamefield>new_po</targetfilenamefield>
+    <operation_type>copy</operation_type>
+    <addresultfilenames>N</addresultfilenames>
+    <overwritetargetfile>N</overwritetargetfile>
+    <createparentfolder>N</createparentfolder>
+    <simulate>N</simulate>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>464</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>db_write_not_filtered_vals</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>DWHOPENDATA</connection>
+    <schema>OWCKAN</schema>
+    <table>OD_TRN_CKAN_PORTAL_NO_FILTER</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>NUM_LINE</column_name>
+          <stream_name>po_row_number</stream_name>
+        </field>
+        <field>
+          <column_name>ROW_VALUE</column_name>
+          <stream_name>po_row</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>1488</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filter_empty_filtered_values</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Group by</send_true_to>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>filtered_content</leftvalue>
+ <function>&#x3c;&#x3e;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>&#x22;&#x22;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1568</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filter_rows_1</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>js_extract_vals_to_trans</send_true_to>
+<send_false_to>Sort rows 3</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>po_row</leftvalue>
+ <function>STARTS WITH</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>&#x22;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filter_rows_2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>js_extract_vals_to_trans_msgid 2</send_true_to>
+<send_false_to>Sort rows 4</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>po_row</leftvalue>
+ <function>STARTS WITH</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>msgstr &#x22;&#x22;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filter_rows_3</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Sort rows 2</send_true_to>
+<send_false_to>Sort rows</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>po_row</leftvalue>
+ <function>STARTS WITH</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>msgstr&#x5b;0</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>filter_rows_4</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>js_extract_orig_content</send_true_to>
+<send_false_to>db_write_not_filtered_vals</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>po_row</leftvalue>
+ <function>STARTS WITH</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>msgstr&#x5b;1</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get_msgid_with_plural 2</name>
+    <type>AnalyticQuery</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <group>
+      </group>
+      <fields>
+        <field>
+          <aggregate>msgid_plural</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>1</valuefield>
+        </field>
+        <field>
+          <aggregate>msgid_singular</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>2</valuefield>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>832</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get_msgid_with_plural 2 2</name>
+    <type>AnalyticQuery</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <group>
+      </group>
+      <fields>
+        <field>
+          <aggregate>msgid_plural</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>1</valuefield>
+        </field>
+        <field>
+          <aggregate>doos</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>2</valuefield>
+        </field>
+        <field>
+          <aggregate>treees</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>3</valuefield>
+        </field>
+        <field>
+          <aggregate>cuatroo</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>4</valuefield>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>1184</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get_previous_fields</name>
+    <type>AnalyticQuery</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <group>
+      </group>
+      <fields>
+        <field>
+          <aggregate>msgid</aggregate>
+          <subject>po_row</subject>
+          <type>LAG</type>
+          <valuefield>1</valuefield>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get_variables</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>pot_file_folder</name>
+        <variable>&#x24;&#x7b;pot_file_folder&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>pot_file_name</name>
+        <variable>&#x24;&#x7b;pot_file_name&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>insert_orig_values_db</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>DWHOPENDATA</connection>
+    <schema>OWCKAN</schema>
+    <table>OD_TRN_CKAN_PORTAL_ORIGINAL</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>NUM_LINE</column_name>
+          <stream_name>po_row_number</stream_name>
+        </field>
+        <field>
+          <column_name>ORIGINAL</column_name>
+          <stream_name>original_content</stream_name>
+        </field>
+        <field>
+          <column_name>PO_ROW</column_name>
+          <stream_name>po_row</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1632</xloc>
+      <yloc>752</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>insert_orig_values_db 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>DWHOPENDATA</connection>
+    <schema>OWCKAN</schema>
+    <table>OD_TRN_CKAN_PORTAL_ORIGINAL</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>NUM_LINE</column_name>
+          <stream_name>po_row_number</stream_name>
+        </field>
+        <field>
+          <column_name>PO_ROW</column_name>
+          <stream_name>po_row</stream_name>
+        </field>
+        <field>
+          <column_name>ORIGINAL</column_name>
+          <stream_name>original_content</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1184</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js_extract_orig_content</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var original_content &#x3d; msgid_singular.replace&#x28;&#x27;msgid_plural &#x22;&#x27;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;original_content.substr&#x28;original_content.length - 1, original_content.length&#x29; &#x3d;&#x3d; &#x27;&#x22;&#x27;&#x29;&#x7b;&#xd;&#xa;	original_content &#x3d; original_content.substr&#x28;0, original_content.length - 1&#x29;&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>original_content</name>
+        <rename>original_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1008</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js_extract_vals_to_trans</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var excluded_vals &#x3d; &#x5b;&#xd;&#xa;	&#x27;Project-Id-Version&#x27;,&#xd;&#xa;	&#x27;Report-Msgid-Bugs-To&#x27;,&#xd;&#xa;	&#x27;POT-Creation-Date&#x27;,&#xd;&#xa;	&#x27;PO-Revision-Date&#x27;,&#xd;&#xa;	&#x27;Last-Translator&#x27;,&#xd;&#xa;	&#x27;Language-Team&#x27;,&#xd;&#xa;	&#x27;MIME-Version&#x27;,&#xd;&#xa;	&#x27;Content-Type&#x27;,&#xd;&#xa;	&#x27;Content-Transfer-Encoding&#x27;,&#xd;&#xa;	&#x27;Generated-By&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Public Domain Dedication and License &#x28;PDDL&#x29;&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Open Database License &#x28;OdbL&#x29;&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Attribution License&#x27;,&#xd;&#xa;	&#x27;Creative Commons CCZero&#x27;,&#xd;&#xa;	&#x27;Creative Commons Attribution&#x27;,&#xd;&#xa;	&#x27;Creative Commons Attribution Share-Alike&#x27;,&#xd;&#xa;	&#x27;GNU Free Documentation License&#x27;,&#xd;&#xa;	&#x27;UK Open Government Licence &#x28;OGL&#x29;&#x27;,&#xd;&#xa;	&#x27;Creative Commons Non-Commercial &#x28;Any&#x29;&#x27;&#xd;&#xa;&#x5d;&#x3b;&#xd;&#xa;var original_content &#x3d; &#x22; &#x22;&#x3b;&#xd;&#xa;var filtered_content &#x3d; &#x22; &#x22;&#x3b;&#xd;&#xa;if &#x28;po_row &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;	original_content &#x3d; po_row.substr&#x28;1, po_row.length - 2&#x29;&#x3b;&#xd;&#xa;	var isExcludedVal &#x3d; false&#x3b;&#xd;&#xa;	for &#x28;val in excluded_vals&#x29;&#x7b;	&#xd;&#xa;		if &#x28;original_content.indexOf&#x28;excluded_vals&#x5b;val&#x5d;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			isExcludedVal &#x3d; true&#x3b;&#xd;&#xa;			break&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	if &#x28;isExcludedVal &#x3d;&#x3d; false&#x29;&#x7b;&#xd;&#xa;		filtered_content &#x3d; filter_content&#x28;original_content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function filter_content&#x28;content&#x29;&#x7b;&#xd;&#xa;&#xd;&#xa;	&#x2f;&#x2f; &#x25;s value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;s&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;s&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;r value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;r&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;r&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;i value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;i&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;i&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; _ values that have not been replaced yet&#xd;&#xa;	if &#x28;exists&#x28;&#x27;_&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;content.charAt&#x28;content.indexOf&#x28;&#x22;_&#x22;&#x29; - 1&#x29; &#x3d;&#x3d; &#x22; &#x22;&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; If the content is not a replaced content&#xd;&#xa;			if &#x28;content.charAt&#x28;content.indexOf&#x28;&#x22;_&#x22;&#x29; &#x2b; 1&#x29; &#x21;&#x3d; &#x22; &#x22;&#x29;&#x7b;&#xd;&#xa;				var post_char &#x3d; content.split&#x28;&#x22;_&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;				var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;				var post_word &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;				word &#x3d; &#x22;_&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;				content &#x3d; content.replace&#x28;new RegExp&#x28;word,&#x27;g&#x27;&#x29;, &#x22;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; HTML tag &#x3c;tag&#x3e;word&#x3c;&#x2f;tag&#x3e;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3c;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x3e;&#x22;, content&#x29; &#x26;&#x26; &#x28;numberOf&#x28;&#x22;&#x3c;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29; &#x26;&#x26; &#x28;numberOf&#x28;&#x22;&#x3e;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; getTagContent&#x28;content&#x29;&#x3b; &#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; Medium tag word&#x3e;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3e;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var slice_content &#x3d; content.slice&#x28;0, content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;		if &#x28;slice_content &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;			content &#x3d; content.replace&#x28;slice_content, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		&#x2f;&#x2f;Alert&#x28;&#x22;Medium &#x3e;&#x3a; &#x22; &#x2b; content &#x2b; &#x22;&#x5c;n Slice&#x3a; &#x22; &#x2b; slice_content &#x2b; &#x22;&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; Medium tag &#x3c;word&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3c;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var slice_content &#x3d; content.slice&#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; - 1, content.length&#x29;&#x3b;&#xd;&#xa;		if &#x28;slice_content &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;			content &#x3d; content.replace&#x28;slice_content, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		&#x2f;&#x2f;Alert&#x28;&#x22;Medium &#x3c;&#x3a; &#x22; &#x2b; content &#x2b; &#x22;&#x5c;n Slice&#x3a; &#x22; &#x2b; slice_content &#x2b; &#x22;&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; new line &#x5c;n&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x5c;&#x5c;n&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;&#x22;&#x5c;&#x5c;n&#x22;, &#x22; _ &#x22;&#x29;&#x3b; &#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x7b;word&#x7d;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x7d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		&#x2f;&#x2f; There is only one combination&#xd;&#xa;		if &#x28;numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x3d;&#x3d; 1 &#x26;&#x26; numberOf&#x28;&#x22;&#x7d;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29;&#x7b;&#xd;&#xa;			var keys &#x3d; &#x22;&#x7b;&#x22; &#x2b; content.split&#x28;&#x22;&#x7b;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x7d;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x7d;&#x22;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;keys, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x2f;&#x2f; There are more than one combination&#xd;&#xa;		&#x7d; else if &#x28;numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x3e; 1 &#x26;&#x26; numberOf&#x28;&#x22;&#x7d;&#x22;, content&#x29; &#x3e; 1&#x29;&#x7b;&#xd;&#xa;			var numInitKeys &#x3d; numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29;&#x3b;&#xd;&#xa;			var numFinalKeys &#x3d; numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29;&#x3b;&#xd;&#xa;			if &#x28;numInitKeys &#x3d;&#x3d; numFinalKeys&#x29;&#x7b;&#xd;&#xa;				var combs &#x3d; numInitKeys&#x3b;&#xd;&#xa;				for &#x28;var i&#x3d;0&#x3b; i&#x3c;combs&#x3b; i&#x2b;&#x2b;&#x29;&#x7b;&#xd;&#xa;					var initialKey &#x3d; content.indexOf&#x28;&#x22;&#x7b;&#x22;&#x29;&#x3b;&#xd;&#xa;					var finalKey &#x3d; content.indexOf&#x28;&#x22;&#x7d;&#x22;&#x29;&#x3b;&#xd;&#xa;					var completeKey &#x3d; content.slice&#x28;initialKey, finalKey &#x2b; 1&#x29;&#x3b;&#xd;&#xa;					content &#x3d; content.replace&#x28;completeKey, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;				&#x7d;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x5b;number&#x3a;word&#x5d;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x7c;&#x7c; exists&#x28;&#x22;&#x5d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x5d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;			var keys &#x3d; &#x22;&#x5b;&#x22; &#x2b; content.split&#x28;&#x22;&#x5b;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x5d;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x5d;&#x22;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;keys, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x26;&#x26; numberOf&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29;&#x7b;&#xd;&#xa;			var bracket &#x3d; content.indexOf&#x28;&#x22;&#x5b;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;content &#x3d; content.slice&#x28;0, bracket - 1&#x29;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;content.slice&#x28;bracket - 1, content.length&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5d;&#x22;, content&#x29; &#x26;&#x26; numberOf&#x28;&#x22;&#x5d;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29; &#x7b;&#xd;&#xa;			var bracket &#x3d; content.indexOf&#x28;&#x22;&#x5d;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;content &#x3d; content.slice&#x28;bracket &#x2b; 1, content.length&#x29;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;content.slice&#x28;0, bracket &#x2b; 1&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d; &#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;&#x28;word&#x29;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;&#x28;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x29;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var keys &#x3d; &#x22;&#x25;&#x28;&#x22; &#x2b; content.split&#x28;&#x22;&#x25;&#x28;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x29;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x29;&#x22;&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;keys, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; URL&#xd;&#xa;	if &#x28;exists&#x28;&#x27;http&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;http&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var post_word &#x3d; post_char.slice&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		word &#x3d; &#x22;http&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;word, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; &#x5c;&#x22;word&#x5c;&#x22; &#xd;&#xa;	if &#x28;&#x2f;&#x5c;&#x5c;&#x2f;.test&#x28;content&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;		&#x2f;&#x2a; if &#x28;numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29;&#x7b;&#xd;&#xa;			if &#x28;numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x25; 2 &#x3d;&#x3d; 0&#x29;&#x7b;&#xd;&#xa;				var num &#x3d; numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x2f; 2&#x3b;&#xd;&#xa;				for &#x28;var i&#x3d;0&#x3b; i&#x3c;num&#x3b; i&#x2b;&#x2b;&#x29;&#x7b;&#xd;&#xa;					var first_char &#x3d; content.indexOf&#x28;&#x27;&#x5c;&#x5c;&#x27;&#x29;&#x3b;&#xd;&#xa;					var second_part &#x3d; content.substr&#x28;first_char, content.length -1&#x29;&#x3b;&#xd;&#xa;					var second_char &#x3d; second_part.indexOf&#x28;&#x27;&#x5c;&#x5c;&#x27;&#x29; &#x2b; first_char&#x3b;&#xd;&#xa;					var complete &#x3d; content.substr&#x28;first_char, second_char&#x29;&#x3b;&#xd;&#xa;					content &#x3d; content.replace&#x28;complete,&#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;					Alert&#x28;&#x22;first&#x3a; &#x22; &#x2b; first_char &#x2b; &#x22; &#x5c;nsecond&#x3a; &#x22; &#x2b; second_char &#x2b; &#x22;&#x5c;ncomplete&#x3a; &#x22; &#x2b; complete &#x2b; &#x22; &#x5c;ncontent&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;				&#x7d;&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				&#x2f;&#x2f;content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x22;&#x2f;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;				content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;				&#x2f;&#x2f;Alert&#x28;&#x22;First else&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d; else &#x7b;&#xd;&#xa;			&#x2f;&#x2f;content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x22;&#x2f;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;			content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;Alert&#x28;&#x22;Second else&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;		&#x7d; &#x2a;&#x2f;&#xd;&#xa;		content &#x3d; content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x2f;g, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;		&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; &#x22;word&#x22;&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x22;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x27;&#x22;&#x27;,&#x27;g&#x27;&#x29;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; Avoid . problably a website&#xd;&#xa;	&#x2f;&#x2a; if &#x28;exists&#x28;&#x27;.&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var pre_char &#x3d; content.split&#x28;&#x22;.&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;.&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var pre_dot &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;		var post_dot &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		word &#x3d; pre_dot &#x2b; &#x22;.&#x22; &#x2b; post_dot&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;word, &#x27;g&#x27;&#x29;, &#x22;&#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#x2a;&#x2f;&#xd;&#xa;	&#x2f;&#x2f; Avoid &#x40;, probably an email&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x40;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var pre_char &#x3d; content.split&#x28;&#x22;&#x40;&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;&#x40;&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var email &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var pre_email &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;		var post_email &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		email &#x3d; pre_email &#x2b; &#x22;&#x40;&#x22; &#x2b; post_email&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;email,&#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; Avoid word1&#x2f;word2 probably JSON structure&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x2f;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;&#x21;exists&#x28;&#x22;http&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;			var pre_char &#x3d; content.split&#x28;&#x22;&#x2f;&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;			var post_char &#x3d; content.split&#x28;&#x22;&#x2f;&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;			var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;			var pre_word &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;			var post_word &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;			word &#x3d; pre_word &#x2b; &#x22;&#x2f;&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;new RegExp&#x28;word,&#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d; &#xd;&#xa;	return content&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function exists&#x28;value, sentence&#x29;&#x7b;&#xd;&#xa;	if &#x28;sentence.indexOf&#x28;value&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;		return true&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	return false&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function numberOf&#x28;value, sentence&#x29;&#x7b;&#xd;&#xa;	return &#x28;sentence.split&#x28;value&#x29;.length - 1&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function getTagContent&#x28;tag&#x29;&#x7b;&#xd;&#xa;	var content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	&#x2f;&#x2f; Get the first occurence of the tag&#xd;&#xa;	var count_init_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x3b;&#xd;&#xa;	if &#x28;count_init_tag &#x3e; -1&#x29;&#x7b;&#xd;&#xa;	  	&#x2f;&#x2f; If the tag is a final tag &#x28;should not be&#x29;, search the next one&#xd;&#xa;	  	if &#x28;tag.charAt&#x28;count_init_tag &#x2b; 1&#x29; &#x3d;&#x3d; &#x22;&#x2f;&#x22;&#x29;&#x7b;&#xd;&#xa;	  	    var not_final_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;&#x3b;&#xd;&#xa;	  		tag &#x3d; tag.slice&#x28;not_final_tag &#x2b; 1, tag.length&#x29;&#x3b;&#xd;&#xa;	  		count_init_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x3b;&#xd;&#xa;	  	&#x7d;&#xd;&#xa;&#xd;&#xa;	  	&#x2f;&#x2f; Get the first occurence of the final tag&#xd;&#xa;	  	var count_end_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;&#x3b;&#xd;&#xa;	  	var complete_tag_name &#x3d; tag.slice&#x28;count_init_tag, count_end_tag &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	  	var tag_name &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	  	var final_tag &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	  	&#x2f;&#x2f; There are blank spaces &#x28;properties&#x29; into the tag&#xd;&#xa;	  	if &#x28;complete_tag_name.indexOf&#x28;&#x22; &#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;	  		tag_name &#x3d; &#x28;complete_tag_name.split&#x28;&#x22; &#x22;&#x29;&#x5b;0&#x5d;&#x29;.slice&#x28;1, complete_tag_name.split&#x28;&#x22; &#x22;&#x29;&#x5b;0&#x5d;.length&#x29;&#x3b;&#xd;&#xa;	  	&#x7d; else &#x7b;&#xd;&#xa;	  		tag_name &#x3d; complete_tag_name.slice&#x28;1, complete_tag_name.length - 1&#x29;&#x3b;&#xd;&#xa;	  	&#x7d;&#xd;&#xa;	  	final_tag &#x3d; &#x22;&#x3c;&#x2f;&#x22; &#x2b; tag_name &#x2b; &#x22;&#x3e;&#x22;&#x3b;&#xd;&#xa;		&#x2f;&#x2f; Delete the tags from the original content&#xd;&#xa;		if &#x28;exists&#x28;complete_tag_name, tag&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;			content &#x3d; tag.replace&#x28;complete_tag_name, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;final_tag, tag&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;			content &#x3d; tag.replace&#x28;final_tag, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	  	&#x2f;&#x2f; Check if there are more content&#xd;&#xa;		if &#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; It is a complete tag&#xd;&#xa;			if&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;				content &#x3d; getTagContent&#x28;content&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f; Only a part of an initial tag&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				content &#x3d; content.slice&#x28;0, content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; It is a complete tag&#xd;&#xa;			if &#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;				content &#x3d; getTagContent&#x28;content&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f; Only a part of an end tag&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				content &#x3d; content.slice&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;, content.length&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	  	&#x2f;&#x2f;Alert&#x28;&#x22;Tag&#x3a; &#x22; &#x2b; tag &#x2b; &#x22;&#x5c;n&#x5c;n Complete_tag_name&#x3a; &#x22; &#x2b; complete_tag_name &#x2b; &#x22;&#x5c;n&#x5c;n Final_tag&#x3a; &#x22; &#x2b; final_tag &#x2b; &#x22;&#x5c;n&#x5c;n Tag_name&#x3a; &#x22; &#x2b; tag_name &#x2b; &#x22;&#x5c;n&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d; else &#x7b;&#xd;&#xa;		content &#x3d; tag&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	return content&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>original_content</name>
+        <rename>original_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>filtered_content</name>
+        <rename>filtered_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1024</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js_extract_vals_to_trans_msgid 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var excluded_vals &#x3d; &#x5b;&#xd;&#xa;	&#x27;Project-Id-Version&#x27;,&#xd;&#xa;	&#x27;Report-Msgid-Bugs-To&#x27;,&#xd;&#xa;	&#x27;POT-Creation-Date&#x27;,&#xd;&#xa;	&#x27;PO-Revision-Date&#x27;,&#xd;&#xa;	&#x27;Last-Translator&#x27;,&#xd;&#xa;	&#x27;Language-Team&#x27;,&#xd;&#xa;	&#x27;MIME-Version&#x27;,&#xd;&#xa;	&#x27;Content-Type&#x27;,&#xd;&#xa;	&#x27;Content-Transfer-Encoding&#x27;,&#xd;&#xa;	&#x27;Generated-By&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Public Domain Dedication and License &#x28;PDDL&#x29;&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Open Database License &#x28;OdbL&#x29;&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Attribution License&#x27;,&#xd;&#xa;	&#x27;Creative Commons CCZero&#x27;,&#xd;&#xa;	&#x27;Creative Commons Attribution&#x27;,&#xd;&#xa;	&#x27;Creative Commons Attribution Share-Alike&#x27;,&#xd;&#xa;	&#x27;GNU Free Documentation License&#x27;,&#xd;&#xa;	&#x27;UK Open Government Licence &#x28;OGL&#x29;&#x27;,&#xd;&#xa;	&#x27;Creative Commons Non-Commercial &#x28;Any&#x29;&#x27;&#xd;&#xa;&#x5d;&#x3b;&#xd;&#xa;var original_content &#x3d; &#x22; &#x22;&#x3b;&#xd;&#xa;var filtered_content &#x3d; &#x22; &#x22;&#x3b;&#xd;&#xa;if &#x28;msgid &#x21;&#x3d; null &#x26;&#x26; msgid &#x21;&#x3d; &#x27;msgid &#x22;&#x22;&#x27;&#x29;&#x7b;&#xd;&#xa;	var first_char &#x3d; msgid.indexOf&#x28;&#x27;&#x22;&#x27;&#x29;&#x3b;&#xd;&#xa;	original_content &#x3d; msgid.slice&#x28;first_char &#x2b; 1, msgid.length - 1&#x29;&#x3b;&#xd;&#xa;	var isExcludedVal &#x3d; false&#x3b;&#xd;&#xa;	for &#x28;val in excluded_vals&#x29;&#x7b;&#xd;&#xa;		if &#x28;original_content.indexOf&#x28;val&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			isExcludedVal &#x3d; true&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	if &#x28;isExcludedVal &#x3d;&#x3d; false&#x29;&#x7b;&#xd;&#xa;		filtered_content &#x3d; filter_content&#x28;original_content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function filter_content&#x28;content&#x29;&#x7b;&#xd;&#xa;&#xd;&#xa;	&#x2f;&#x2f; &#x25;s value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;s&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;s&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;r value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;r&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;r&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;i value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;i&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;i&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; _ values that have not been replaced yet&#xd;&#xa;	if &#x28;exists&#x28;&#x27;_&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;content.charAt&#x28;content.indexOf&#x28;&#x22;_&#x22;&#x29; - 1&#x29; &#x3d;&#x3d; &#x22; &#x22;&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; If the content is not a replaced content&#xd;&#xa;			if &#x28;content.charAt&#x28;content.indexOf&#x28;&#x22;_&#x22;&#x29; &#x2b; 1&#x29; &#x21;&#x3d; &#x22; &#x22;&#x29;&#x7b;&#xd;&#xa;				var post_char &#x3d; content.split&#x28;&#x22;_&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;				var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;				var post_word &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;				word &#x3d; &#x22;_&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;				content &#x3d; content.replace&#x28;new RegExp&#x28;word,&#x27;g&#x27;&#x29;, &#x22;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; HTML tag &#x3c;tag&#x3e;word&#x3c;&#x2f;tag&#x3e;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3c;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x3e;&#x22;, content&#x29; &#x26;&#x26; &#x28;numberOf&#x28;&#x22;&#x3c;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29; &#x26;&#x26; &#x28;numberOf&#x28;&#x22;&#x3e;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; getTagContent&#x28;content&#x29;&#x3b; &#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; Medium tag word&#x3e;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3e;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var slice_content &#x3d; content.slice&#x28;0, content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;		if &#x28;slice_content &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;			content &#x3d; content.replace&#x28;slice_content, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		&#x2f;&#x2f;Alert&#x28;&#x22;Medium &#x3e;&#x3a; &#x22; &#x2b; content &#x2b; &#x22;&#x5c;n Slice&#x3a; &#x22; &#x2b; slice_content &#x2b; &#x22;&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; Medium tag &#x3c;word&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3c;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var slice_content &#x3d; content.slice&#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; - 1, content.length&#x29;&#x3b;&#xd;&#xa;		if &#x28;slice_content &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;			content &#x3d; content.replace&#x28;slice_content, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		&#x2f;&#x2f;Alert&#x28;&#x22;Medium &#x3c;&#x3a; &#x22; &#x2b; content &#x2b; &#x22;&#x5c;n Slice&#x3a; &#x22; &#x2b; slice_content &#x2b; &#x22;&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; new line &#x5c;n&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x5c;&#x5c;n&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;&#x22;&#x5c;&#x5c;n&#x22;, &#x22; _ &#x22;&#x29;&#x3b; &#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x7b;word&#x7d;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x7d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		&#x2f;&#x2f; There is only one combination&#xd;&#xa;		if &#x28;numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x3d;&#x3d; 1 &#x26;&#x26; numberOf&#x28;&#x22;&#x7d;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29;&#x7b;&#xd;&#xa;			var keys &#x3d; &#x22;&#x7b;&#x22; &#x2b; content.split&#x28;&#x22;&#x7b;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x7d;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x7d;&#x22;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;keys, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x2f;&#x2f; There are more than one combination&#xd;&#xa;		&#x7d; else if &#x28;numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x3e; 1 &#x26;&#x26; numberOf&#x28;&#x22;&#x7d;&#x22;, content&#x29; &#x3e; 1&#x29;&#x7b;&#xd;&#xa;			var numInitKeys &#x3d; numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29;&#x3b;&#xd;&#xa;			var numFinalKeys &#x3d; numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29;&#x3b;&#xd;&#xa;			if &#x28;numInitKeys &#x3d;&#x3d; numFinalKeys&#x29;&#x7b;&#xd;&#xa;				var combs &#x3d; numInitKeys&#x3b;&#xd;&#xa;				for &#x28;var i&#x3d;0&#x3b; i&#x3c;combs&#x3b; i&#x2b;&#x2b;&#x29;&#x7b;&#xd;&#xa;					var initialKey &#x3d; content.indexOf&#x28;&#x22;&#x7b;&#x22;&#x29;&#x3b;&#xd;&#xa;					var finalKey &#x3d; content.indexOf&#x28;&#x22;&#x7d;&#x22;&#x29;&#x3b;&#xd;&#xa;					var completeKey &#x3d; content.slice&#x28;initialKey, finalKey &#x2b; 1&#x29;&#x3b;&#xd;&#xa;					content &#x3d; content.replace&#x28;completeKey, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;				&#x7d;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x5b;number&#x3a;word&#x5d;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x7c;&#x7c; exists&#x28;&#x22;&#x5d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x5d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;			var keys &#x3d; &#x22;&#x5b;&#x22; &#x2b; content.split&#x28;&#x22;&#x5b;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x5d;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x5d;&#x22;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;keys, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x26;&#x26; numberOf&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29;&#x7b;&#xd;&#xa;			var bracket &#x3d; content.indexOf&#x28;&#x22;&#x5b;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;content &#x3d; content.slice&#x28;0, bracket - 1&#x29;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;content.slice&#x28;bracket - 1, content.length&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5d;&#x22;, content&#x29; &#x26;&#x26; numberOf&#x28;&#x22;&#x5d;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29; &#x7b;&#xd;&#xa;			var bracket &#x3d; content.indexOf&#x28;&#x22;&#x5d;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;content &#x3d; content.slice&#x28;bracket &#x2b; 1, content.length&#x29;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;content.slice&#x28;0, bracket &#x2b; 1&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d; &#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;&#x28;word&#x29;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;&#x28;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x29;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var keys &#x3d; &#x22;&#x25;&#x28;&#x22; &#x2b; content.split&#x28;&#x22;&#x25;&#x28;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x29;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x29;&#x22;&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;keys, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; URL&#xd;&#xa;	if &#x28;exists&#x28;&#x27;http&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;http&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var post_word &#x3d; post_char.slice&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		word &#x3d; &#x22;http&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;word, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; &#x5c;&#x22;word&#x5c;&#x22; &#xd;&#xa;	if &#x28;&#x2f;&#x5c;&#x5c;&#x2f;.test&#x28;content&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;		&#x2f;&#x2a; if &#x28;numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29;&#x7b;&#xd;&#xa;			if &#x28;numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x25; 2 &#x3d;&#x3d; 0&#x29;&#x7b;&#xd;&#xa;				var num &#x3d; numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x2f; 2&#x3b;&#xd;&#xa;				for &#x28;var i&#x3d;0&#x3b; i&#x3c;num&#x3b; i&#x2b;&#x2b;&#x29;&#x7b;&#xd;&#xa;					var first_char &#x3d; content.indexOf&#x28;&#x27;&#x5c;&#x5c;&#x27;&#x29;&#x3b;&#xd;&#xa;					var second_part &#x3d; content.substr&#x28;first_char, content.length -1&#x29;&#x3b;&#xd;&#xa;					var second_char &#x3d; second_part.indexOf&#x28;&#x27;&#x5c;&#x5c;&#x27;&#x29; &#x2b; first_char&#x3b;&#xd;&#xa;					var complete &#x3d; content.substr&#x28;first_char, second_char&#x29;&#x3b;&#xd;&#xa;					content &#x3d; content.replace&#x28;complete,&#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;					Alert&#x28;&#x22;first&#x3a; &#x22; &#x2b; first_char &#x2b; &#x22; &#x5c;nsecond&#x3a; &#x22; &#x2b; second_char &#x2b; &#x22;&#x5c;ncomplete&#x3a; &#x22; &#x2b; complete &#x2b; &#x22; &#x5c;ncontent&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;				&#x7d;&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				&#x2f;&#x2f;content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x22;&#x2f;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;				content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;				&#x2f;&#x2f;Alert&#x28;&#x22;First else&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d; else &#x7b;&#xd;&#xa;			&#x2f;&#x2f;content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x22;&#x2f;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;			content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;Alert&#x28;&#x22;Second else&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;		&#x7d; &#x2a;&#x2f;&#xd;&#xa;		content &#x3d; content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x2f;g, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;		&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; &#x22;word&#x22;&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x22;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x27;&#x22;&#x27;,&#x27;g&#x27;&#x29;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; Avoid . problably a website&#xd;&#xa;	&#x2f;&#x2a; if &#x28;exists&#x28;&#x27;.&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var pre_char &#x3d; content.split&#x28;&#x22;.&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;.&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var pre_dot &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;		var post_dot &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		word &#x3d; pre_dot &#x2b; &#x22;.&#x22; &#x2b; post_dot&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;word, &#x27;g&#x27;&#x29;, &#x22;&#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#x2a;&#x2f;&#xd;&#xa;	&#x2f;&#x2f; Avoid &#x40;, probably an email&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x40;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var pre_char &#x3d; content.split&#x28;&#x22;&#x40;&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;&#x40;&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var email &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var pre_email &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;		var post_email &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		email &#x3d; pre_email &#x2b; &#x22;&#x40;&#x22; &#x2b; post_email&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;email,&#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; Avoid word1&#x2f;word2 probably JSON structure&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x2f;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;&#x21;exists&#x28;&#x22;http&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;			var pre_char &#x3d; content.split&#x28;&#x22;&#x2f;&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;			var post_char &#x3d; content.split&#x28;&#x22;&#x2f;&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;			var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;			var pre_word &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;			var post_word &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;			word &#x3d; pre_word &#x2b; &#x22;&#x2f;&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;new RegExp&#x28;word,&#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d; &#xd;&#xa;	return content&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function exists&#x28;value, sentence&#x29;&#x7b;&#xd;&#xa;	if &#x28;sentence.indexOf&#x28;value&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;		return true&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	return false&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function numberOf&#x28;value, sentence&#x29;&#x7b;&#xd;&#xa;	return &#x28;sentence.split&#x28;value&#x29;.length - 1&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function getTagContent&#x28;tag&#x29;&#x7b;&#xd;&#xa;	var content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	&#x2f;&#x2f; Get the first occurence of the tag&#xd;&#xa;	var count_init_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x3b;&#xd;&#xa;	if &#x28;count_init_tag &#x3e; -1&#x29;&#x7b;&#xd;&#xa;	  	&#x2f;&#x2f; If the tag is a final tag &#x28;should not be&#x29;, search the next one&#xd;&#xa;	  	if &#x28;tag.charAt&#x28;count_init_tag &#x2b; 1&#x29; &#x3d;&#x3d; &#x22;&#x2f;&#x22;&#x29;&#x7b;&#xd;&#xa;	  	    var not_final_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;&#x3b;&#xd;&#xa;	  		tag &#x3d; tag.slice&#x28;not_final_tag &#x2b; 1, tag.length&#x29;&#x3b;&#xd;&#xa;	  		count_init_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x3b;&#xd;&#xa;	  	&#x7d;&#xd;&#xa;&#xd;&#xa;	  	&#x2f;&#x2f; Get the first occurence of the final tag&#xd;&#xa;	  	var count_end_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;&#x3b;&#xd;&#xa;	  	var complete_tag_name &#x3d; tag.slice&#x28;count_init_tag, count_end_tag &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	  	var tag_name &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	  	var final_tag &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	  	&#x2f;&#x2f; There are blank spaces &#x28;properties&#x29; into the tag&#xd;&#xa;	  	if &#x28;complete_tag_name.indexOf&#x28;&#x22; &#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;	  		tag_name &#x3d; &#x28;complete_tag_name.split&#x28;&#x22; &#x22;&#x29;&#x5b;0&#x5d;&#x29;.slice&#x28;1, complete_tag_name.split&#x28;&#x22; &#x22;&#x29;&#x5b;0&#x5d;.length&#x29;&#x3b;&#xd;&#xa;	  	&#x7d; else &#x7b;&#xd;&#xa;	  		tag_name &#x3d; complete_tag_name.slice&#x28;1, complete_tag_name.length - 1&#x29;&#x3b;&#xd;&#xa;	  	&#x7d;&#xd;&#xa;	  	final_tag &#x3d; &#x22;&#x3c;&#x2f;&#x22; &#x2b; tag_name &#x2b; &#x22;&#x3e;&#x22;&#x3b;&#xd;&#xa;		&#x2f;&#x2f; Delete the tags from the original content&#xd;&#xa;		if &#x28;exists&#x28;complete_tag_name, tag&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;			content &#x3d; tag.replace&#x28;complete_tag_name, &#x27;&#x27;&#x29;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;final_tag, tag&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;			content &#x3d; tag.replace&#x28;final_tag, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	  	&#x2f;&#x2f; Check if there are more content&#xd;&#xa;		if &#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; It is a complete tag&#xd;&#xa;			if&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;				content &#x3d; getTagContent&#x28;content&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f; Only a part of an initial tag&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				content &#x3d; content.slice&#x28;0, content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; It is a complete tag&#xd;&#xa;			if &#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;				content &#x3d; getTagContent&#x28;content&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f; Only a part of an end tag&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				content &#x3d; content.slice&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;, content.length&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	  	&#x2f;&#x2f;Alert&#x28;&#x22;Tag&#x3a; &#x22; &#x2b; tag &#x2b; &#x22;&#x5c;n&#x5c;n Complete_tag_name&#x3a; &#x22; &#x2b; complete_tag_name &#x2b; &#x22;&#x5c;n&#x5c;n Final_tag&#x3a; &#x22; &#x2b; final_tag &#x2b; &#x22;&#x5c;n&#x5c;n Tag_name&#x3a; &#x22; &#x2b; tag_name &#x2b; &#x22;&#x5c;n&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d; else &#x7b;&#xd;&#xa;		content &#x3d; tag&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	return content&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>original_content</name>
+        <rename>original_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>filtered_content</name>
+        <rename>filtered_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1024</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js_extract_vals_to_trans_plural</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var msgid_original &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;var msgid_filtered &#x3d; &#x22; &#x22;&#x3b;&#xd;&#xa;var plural_original &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;var plural_filtered &#x3d; &#x22; &#x22;&#x3b;&#xd;&#xa;var excluded_vals &#x3d; &#x5b;&#xd;&#xa;	&#x27;Project-Id-Version&#x27;,&#xd;&#xa;	&#x27;Report-Msgid-Bugs-To&#x27;,&#xd;&#xa;	&#x27;POT-Creation-Date&#x27;,&#xd;&#xa;	&#x27;PO-Revision-Date&#x27;,&#xd;&#xa;	&#x27;Last-Translator&#x27;,&#xd;&#xa;	&#x27;Language-Team&#x27;,&#xd;&#xa;	&#x27;MIME-Version&#x27;,&#xd;&#xa;	&#x27;Content-Type&#x27;,&#xd;&#xa;	&#x27;Content-Transfer-Encoding&#x27;,&#xd;&#xa;	&#x27;Generated-By&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Public Domain Dedication and License &#x28;PDDL&#x29;&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Open Database License &#x28;OdbL&#x29;&#x27;,&#xd;&#xa;	&#x27;Open Data Commons Attribution License&#x27;,&#xd;&#xa;	&#x27;Creative Commons CCZero&#x27;,&#xd;&#xa;	&#x27;Creative Commons Attribution&#x27;,&#xd;&#xa;	&#x27;Creative Commons Attribution Share-Alike&#x27;,&#xd;&#xa;	&#x27;GNU Free Documentation License&#x27;,&#xd;&#xa;	&#x27;UK Open Government Licence &#x28;OGL&#x29;&#x27;,&#xd;&#xa;	&#x27;Creative Commons Non-Commercial &#x28;Any&#x29;&#x27;&#xd;&#xa;&#x5d;&#x3b;&#xd;&#xa;if &#x28;msgid_singular &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;	var first_char &#x3d; msgid_singular.indexOf&#x28;&#x27;&#x22;&#x27;&#x29;&#x3b;&#xd;&#xa;	msgid_original &#x3d; msgid_singular.slice&#x28;first_char, msgid_singular.length - 1&#x29;&#x3b;&#xd;&#xa;	var isExcludedVal &#x3d; false&#x3b;&#xd;&#xa;	for &#x28;val in excluded_vals&#x29;&#x7b;&#xd;&#xa;		if &#x28;msgid_original.indexOf&#x28;val&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			isExcludedVal &#x3d; true&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	if &#x28;isExcludedVal &#x3d;&#x3d; false&#x29;&#x7b;&#xd;&#xa;		msgid_filtered &#x3d; filter_content&#x28;msgid_original&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;&#x7d;&#xd;&#xa;if &#x28;msgid_plural &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;	var first_char &#x3d; msgid_plural.indexOf&#x28;&#x27;&#x22;&#x27;&#x29;&#x3b;&#xd;&#xa;	plural_original &#x3d; msgid_plural.slice&#x28;first_char &#x2b; 1, msgid_plural.length - 1&#x29;&#x3b;&#xd;&#xa;	var isExcludedVal &#x3d; false&#x3b;&#xd;&#xa;	for &#x28;val in excluded_vals&#x29;&#x7b;&#xd;&#xa;		if &#x28;plural_original.indexOf&#x28;val&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			isExcludedVal &#x3d; true&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	if &#x28;isExcludedVal &#x3d;&#x3d; false&#x29;&#x7b;&#xd;&#xa;		plural_filtered &#x3d; filter_content&#x28;plural_original&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;var original_content &#x3d; msgid_original &#x2b; &#x22;&#x23;&#x23;&#x22; &#x2b; plural_original&#x3b;&#xd;&#xa;var filtered_content &#x3d; msgid_filtered &#x2b; &#x22;&#x23;&#x23;&#x22; &#x2b; plural_filtered&#x3b;&#xd;&#xa;&#xd;&#xa;function filter_content&#x28;content&#x29;&#x7b;&#xd;&#xa;&#xd;&#xa;	&#x2f;&#x2f; &#x25;s value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;s&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;s&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;r value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;r&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;r&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;i value&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;i&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x22;&#x25;i&#x22;, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; _ values that have not been replaced yet&#xd;&#xa;	if &#x28;exists&#x28;&#x27;_&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;content.charAt&#x28;content.indexOf&#x28;&#x22;_&#x22;&#x29; - 1&#x29; &#x3d;&#x3d; &#x22; &#x22;&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; If the content is not a replaced content&#xd;&#xa;			if &#x28;content.charAt&#x28;content.indexOf&#x28;&#x22;_&#x22;&#x29; &#x2b; 1&#x29; &#x21;&#x3d; &#x22; &#x22;&#x29;&#x7b;&#xd;&#xa;				var post_char &#x3d; content.split&#x28;&#x22;_&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;				var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;				var post_word &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;				word &#x3d; &#x22;_&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;				content &#x3d; content.replace&#x28;new RegExp&#x28;word,&#x27;g&#x27;&#x29;, &#x22;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; HTML tag &#x3c;tag&#x3e;word&#x3c;&#x2f;tag&#x3e;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3c;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x3e;&#x22;, content&#x29; &#x26;&#x26; &#x28;numberOf&#x28;&#x22;&#x3c;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29; &#x26;&#x26; &#x28;numberOf&#x28;&#x22;&#x3e;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; getTagContent&#x28;content&#x29;&#x3b; &#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; Medium tag word&#x3e;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3e;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var slice_content &#x3d; content.slice&#x28;0, content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;		if &#x28;slice_content &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;			content &#x3d; content.replace&#x28;slice_content, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		&#x2f;&#x2f;Alert&#x28;&#x22;Medium &#x3e;&#x3a; &#x22; &#x2b; content &#x2b; &#x22;&#x5c;n Slice&#x3a; &#x22; &#x2b; slice_content &#x2b; &#x22;&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; Medium tag &#x3c;word&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x3c;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var slice_content &#x3d; content.slice&#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; - 1, content.length&#x29;&#x3b;&#xd;&#xa;		if &#x28;slice_content &#x21;&#x3d; &#x22;&#x22;&#x29;&#x7b;&#xd;&#xa;			content &#x3d; content.replace&#x28;slice_content, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		&#x2f;&#x2f;Alert&#x28;&#x22;Medium &#x3c;&#x3a; &#x22; &#x2b; content &#x2b; &#x22;&#x5c;n Slice&#x3a; &#x22; &#x2b; slice_content &#x2b; &#x22;&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; new line &#x5c;n&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x5c;&#x5c;n&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;&#x22;&#x5c;&#x5c;n&#x22;, &#x22; _ &#x22;&#x29;&#x3b; &#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x7b;word&#x7d;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x7d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		&#x2f;&#x2f; There is only one combination&#xd;&#xa;		if &#x28;numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x3d;&#x3d; 1 &#x26;&#x26; numberOf&#x28;&#x22;&#x7d;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29;&#x7b;&#xd;&#xa;			var keys &#x3d; &#x22;&#x7b;&#x22; &#x2b; content.split&#x28;&#x22;&#x7b;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x7d;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x7d;&#x22;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;keys, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x2f;&#x2f; There are more than one combination&#xd;&#xa;		&#x7d; else if &#x28;numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29; &#x3e; 1 &#x26;&#x26; numberOf&#x28;&#x22;&#x7d;&#x22;, content&#x29; &#x3e; 1&#x29;&#x7b;&#xd;&#xa;			var numInitKeys &#x3d; numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29;&#x3b;&#xd;&#xa;			var numFinalKeys &#x3d; numberOf&#x28;&#x22;&#x7b;&#x22;, content&#x29;&#x3b;&#xd;&#xa;			if &#x28;numInitKeys &#x3d;&#x3d; numFinalKeys&#x29;&#x7b;&#xd;&#xa;				var combs &#x3d; numInitKeys&#x3b;&#xd;&#xa;				for &#x28;var i&#x3d;0&#x3b; i&#x3c;combs&#x3b; i&#x2b;&#x2b;&#x29;&#x7b;&#xd;&#xa;					var initialKey &#x3d; content.indexOf&#x28;&#x22;&#x7b;&#x22;&#x29;&#x3b;&#xd;&#xa;					var finalKey &#x3d; content.indexOf&#x28;&#x22;&#x7d;&#x22;&#x29;&#x3b;&#xd;&#xa;					var completeKey &#x3d; content.slice&#x28;initialKey, finalKey &#x2b; 1&#x29;&#x3b;&#xd;&#xa;					content &#x3d; content.replace&#x28;completeKey, &#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;				&#x7d;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x5b;number&#x3a;word&#x5d;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x7c;&#x7c; exists&#x28;&#x22;&#x5d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x5d;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;			var keys &#x3d; &#x22;&#x5b;&#x22; &#x2b; content.split&#x28;&#x22;&#x5b;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x5d;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x5d;&#x22;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;keys, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x26;&#x26; numberOf&#x28;&#x22;&#x5b;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29;&#x7b;&#xd;&#xa;			var bracket &#x3d; content.indexOf&#x28;&#x22;&#x5b;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;content &#x3d; content.slice&#x28;0, bracket - 1&#x29;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;content.slice&#x28;bracket - 1, content.length&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;&#x22;&#x5d;&#x22;, content&#x29; &#x26;&#x26; numberOf&#x28;&#x22;&#x5d;&#x22;, content&#x29; &#x3d;&#x3d; 1&#x29; &#x7b;&#xd;&#xa;			var bracket &#x3d; content.indexOf&#x28;&#x22;&#x5d;&#x22;&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;content &#x3d; content.slice&#x28;bracket &#x2b; 1, content.length&#x29;&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;content.slice&#x28;0, bracket &#x2b; 1&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d; &#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; &#x25;&#x28;word&#x29;&#xd;&#xa;	if &#x28;exists&#x28;&#x22;&#x25;&#x28;&#x22;, content&#x29; &#x26;&#x26; exists&#x28;&#x22;&#x29;&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var keys &#x3d; &#x22;&#x25;&#x28;&#x22; &#x2b; content.split&#x28;&#x22;&#x25;&#x28;&#x22;&#x29;&#x5b;1&#x5d;.split&#x28;&#x22;&#x29;&#x22;&#x29;&#x5b;0&#x5d; &#x2b; &#x22;&#x29;&#x22;&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;keys, &#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; URL&#xd;&#xa;	if &#x28;exists&#x28;&#x27;http&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;http&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var post_word &#x3d; post_char.slice&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		word &#x3d; &#x22;http&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;word, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; &#x5c;&#x22;word&#x5c;&#x22; &#xd;&#xa;	if &#x28;&#x2f;&#x5c;&#x5c;&#x2f;.test&#x28;content&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;		&#x2f;&#x2a; if &#x28;numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x3e;&#x3d; 2&#x29;&#x7b;&#xd;&#xa;			if &#x28;numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x25; 2 &#x3d;&#x3d; 0&#x29;&#x7b;&#xd;&#xa;				var num &#x3d; numberOf&#x28;&#x22;&#x5c;&#x5c;&#x22;, content&#x29; &#x2f; 2&#x3b;&#xd;&#xa;				for &#x28;var i&#x3d;0&#x3b; i&#x3c;num&#x3b; i&#x2b;&#x2b;&#x29;&#x7b;&#xd;&#xa;					var first_char &#x3d; content.indexOf&#x28;&#x27;&#x5c;&#x5c;&#x27;&#x29;&#x3b;&#xd;&#xa;					var second_part &#x3d; content.substr&#x28;first_char, content.length -1&#x29;&#x3b;&#xd;&#xa;					var second_char &#x3d; second_part.indexOf&#x28;&#x27;&#x5c;&#x5c;&#x27;&#x29; &#x2b; first_char&#x3b;&#xd;&#xa;					var complete &#x3d; content.substr&#x28;first_char, second_char&#x29;&#x3b;&#xd;&#xa;					content &#x3d; content.replace&#x28;complete,&#x27; _ &#x27;&#x29;&#x3b;&#xd;&#xa;					Alert&#x28;&#x22;first&#x3a; &#x22; &#x2b; first_char &#x2b; &#x22; &#x5c;nsecond&#x3a; &#x22; &#x2b; second_char &#x2b; &#x22;&#x5c;ncomplete&#x3a; &#x22; &#x2b; complete &#x2b; &#x22; &#x5c;ncontent&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;				&#x7d;&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				&#x2f;&#x2f;content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x22;&#x2f;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;				content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;				&#x2f;&#x2f;Alert&#x28;&#x22;First else&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d; else &#x7b;&#xd;&#xa;			&#x2f;&#x2f;content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x22;&#x2f;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;			content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;			&#x2f;&#x2f;Alert&#x28;&#x22;Second else&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;		&#x7d; &#x2a;&#x2f;&#xd;&#xa;		content &#x3d; content.replace&#x28;&#x2f;&#x5c;&#x5c;&#x2f;g, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;		&#xd;&#xa;	&#x7d;&#xd;&#xa;	&#x2f;&#x2f; &#x22;word&#x22;&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x22;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;&#x27;&#x22;&#x27;,&#x27;g&#x27;&#x29;, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; Avoid . problably a website&#xd;&#xa;	&#x2f;&#x2a; if &#x28;exists&#x28;&#x27;.&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var pre_char &#x3d; content.split&#x28;&#x22;.&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;.&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var pre_dot &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;		var post_dot &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		word &#x3d; pre_dot &#x2b; &#x22;.&#x22; &#x2b; post_dot&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;word, &#x27;g&#x27;&#x29;, &#x22;&#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#x2a;&#x2f;&#xd;&#xa;	&#x2f;&#x2f; Avoid &#x40;, probably an email&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x40;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		var pre_char &#x3d; content.split&#x28;&#x22;&#x40;&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;		var post_char &#x3d; content.split&#x28;&#x22;&#x40;&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;		var email &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;		var pre_email &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;		var post_email &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;		email &#x3d; pre_email &#x2b; &#x22;&#x40;&#x22; &#x2b; post_email&#x3b;&#xd;&#xa;		content &#x3d; content.replace&#x28;new RegExp&#x28;email,&#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#x2f;&#x2f; Avoid word1&#x2f;word2 probably JSON structure&#xd;&#xa;	if &#x28;exists&#x28;&#x27;&#x2f;&#x27;, content&#x29;&#x29;&#x7b;&#xd;&#xa;		if &#x28;&#x21;exists&#x28;&#x22;http&#x22;, content&#x29;&#x29;&#x7b;&#xd;&#xa;			var pre_char &#x3d; content.split&#x28;&#x22;&#x2f;&#x22;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;			var post_char &#x3d; content.split&#x28;&#x22;&#x2f;&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;			var word &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;			var pre_word &#x3d; pre_char.substr&#x28;pre_char.lastIndexOf&#x28;&#x22; &#x22;&#x29;, pre_char.length-1&#x29;&#x3b;&#xd;&#xa;			var post_word &#x3d; post_char.substr&#x28;0, post_char.indexOf&#x28;&#x22; &#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;			word &#x3d; pre_word &#x2b; &#x22;&#x2f;&#x22; &#x2b; post_word&#x3b;&#xd;&#xa;			content &#x3d; content.replace&#x28;new RegExp&#x28;word,&#x27;g&#x27;&#x29;, &#x22; _ &#x22;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	&#x7d; &#xd;&#xa;	&#xd;&#xa;	return content&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function exists&#x28;value, sentence&#x29;&#x7b;&#xd;&#xa;	if &#x28;sentence.indexOf&#x28;value&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;		return true&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	return false&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function numberOf&#x28;value, sentence&#x29;&#x7b;&#xd;&#xa;	return &#x28;sentence.split&#x28;value&#x29;.length - 1&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;function getTagContent&#x28;tag&#x29;&#x7b;&#xd;&#xa;	var content &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	&#x2f;&#x2f; Get the first occurence of the tag&#xd;&#xa;	var count_init_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x3b;&#xd;&#xa;	if &#x28;count_init_tag &#x3e; -1&#x29;&#x7b;&#xd;&#xa;	  	&#x2f;&#x2f; If the tag is a final tag &#x28;should not be&#x29;, search the next one&#xd;&#xa;	  	if &#x28;tag.charAt&#x28;count_init_tag &#x2b; 1&#x29; &#x3d;&#x3d; &#x22;&#x2f;&#x22;&#x29;&#x7b;&#xd;&#xa;	  	    var not_final_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;&#x3b;&#xd;&#xa;	  		tag &#x3d; tag.slice&#x28;not_final_tag &#x2b; 1, tag.length&#x29;&#x3b;&#xd;&#xa;	  		count_init_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x3b;&#xd;&#xa;	  	&#x7d;&#xd;&#xa;&#xd;&#xa;	  	&#x2f;&#x2f; Get the first occurence of the final tag&#xd;&#xa;	  	var count_end_tag &#x3d; tag.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;&#x3b;&#xd;&#xa;	  	var complete_tag_name &#x3d; tag.slice&#x28;count_init_tag, count_end_tag &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	  	var tag_name &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	  	var final_tag &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;	  	&#x2f;&#x2f; There are blank spaces &#x28;properties&#x29; into the tag&#xd;&#xa;	  	if &#x28;complete_tag_name.indexOf&#x28;&#x22; &#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;	  		tag_name &#x3d; &#x28;complete_tag_name.split&#x28;&#x22; &#x22;&#x29;&#x5b;0&#x5d;&#x29;.slice&#x28;1, complete_tag_name.split&#x28;&#x22; &#x22;&#x29;&#x5b;0&#x5d;.length&#x29;&#x3b;&#xd;&#xa;	  	&#x7d; else &#x7b;&#xd;&#xa;	  		tag_name &#x3d; complete_tag_name.slice&#x28;1, complete_tag_name.length - 1&#x29;&#x3b;&#xd;&#xa;	  	&#x7d;&#xd;&#xa;	  	final_tag &#x3d; &#x22;&#x3c;&#x2f;&#x22; &#x2b; tag_name &#x2b; &#x22;&#x3e;&#x22;&#x3b;&#xd;&#xa;		&#x2f;&#x2f; Delete the tags from the original content&#xd;&#xa;		if &#x28;exists&#x28;complete_tag_name, tag&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;			content &#x3d; tag.replace&#x28;complete_tag_name, &#x27;&#x27;&#x29;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if &#x28;exists&#x28;final_tag, tag&#x29; &#x3d;&#x3d; true&#x29;&#x7b;&#xd;&#xa;			content &#x3d; tag.replace&#x28;final_tag, &#x27;&#x27;&#x29;&#x3b;&#xd;&#xa;		&#x7d;&#xd;&#xa;	  	&#x2f;&#x2f; Check if there are more content&#xd;&#xa;		if &#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; It is a complete tag&#xd;&#xa;			if&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;				content &#x3d; getTagContent&#x28;content&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f; Only a part of an initial tag&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				content &#x3d; content.slice&#x28;0, content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29;&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;		if&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;			&#x2f;&#x2f; It is a complete tag&#xd;&#xa;			if &#x28;content.indexOf&#x28;&#x22;&#x3c;&#x22;&#x29; &#x3e; -1&#x29;&#x7b;&#xd;&#xa;				content &#x3d; getTagContent&#x28;content&#x29;&#x3b;&#xd;&#xa;			&#x2f;&#x2f; Only a part of an end tag&#xd;&#xa;			&#x7d; else &#x7b;&#xd;&#xa;				content &#x3d; content.slice&#x28;content.indexOf&#x28;&#x22;&#x3e;&#x22;&#x29;, content.length&#x29;&#x3b;&#xd;&#xa;			&#x7d;&#xd;&#xa;		&#x7d;&#xd;&#xa;	  	&#x2f;&#x2f;Alert&#x28;&#x22;Tag&#x3a; &#x22; &#x2b; tag &#x2b; &#x22;&#x5c;n&#x5c;n Complete_tag_name&#x3a; &#x22; &#x2b; complete_tag_name &#x2b; &#x22;&#x5c;n&#x5c;n Final_tag&#x3a; &#x22; &#x2b; final_tag &#x2b; &#x22;&#x5c;n&#x5c;n Tag_name&#x3a; &#x22; &#x2b; tag_name &#x2b; &#x22;&#x5c;n&#x5c;n Content&#x3a; &#x22; &#x2b; content&#x29;&#x3b;&#xd;&#xa;	&#x7d; else &#x7b;&#xd;&#xa;		content &#x3d; tag&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	return content&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>original_content</name>
+        <rename>original_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>filtered_content</name>
+        <rename>filtered_content</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js_form_pot_filename</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var pot_filename &#x3d; pot_file_folder &#x2b; &#x22;&#x2f;&#x22; &#x2b; pot_file_name&#x3b;&#xd;&#xa;var trg_lang &#x3d; languages.split&#x28;&#x22;-&#x22;&#x29;&#x5b;1&#x5d;&#x3b;&#xd;&#xa;var po_filename &#x3d; pot_file_folder &#x2b; &#x22;&#x2f;&#x22; &#x2b; trg_lang&#x3b;&#xd;&#xa;var new_po &#x3d; po_filename &#x2b; &#x22;.po&#x22;&#x3b;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>pot_filename</name>
+        <rename>pot_filename</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>trg_lang</name>
+        <rename>trg_lang</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>po_filename</name>
+        <rename>po_filename</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>new_po</name>
+        <rename>new_po</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>272</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>merge_rows</name>
+    <type>SortedMerge</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>po_row_number</name>
+        <ascending>Y</ascending>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1312</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>read_PO_file</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <accept_filenames>Y</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field>new_po</accept_field>
+    <accept_stepname>Block this step until steps finish</accept_stepname>
+    <separator>&#x24;&#x7b;line.separator&#x7d;</separator>
+    <enclosure/>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>N</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>N</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>Y</rownum>
+    <rownumByFile>Y</rownumByFile>
+    <rownum_field>po_row_number</rownum_field>
+    <format>Unix</format>
+    <encoding>UTF-8</encoding>
+    <add_to_result_filenames>N</add_to_result_filenames>
+    <file>
+      <name>N&#x3a;&#x5c;internationalization&#x5c;es.po</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>po_row</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>-1</position>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>right</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>N</date_format_lenient>
+    <date_format_locale>es_ES</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>736</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>set_filename</name>
+    <type>SetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <field_name>po_filename</field_name>
+        <variable_name>po_filename</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>languages</field_name>
+        <variable_name>languages</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+        </field>
+      </fields>
+    <use_formatting>Y</use_formatting>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>384</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

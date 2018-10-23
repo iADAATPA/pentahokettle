@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>tr_TRANSLATE_REST_CALL</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;OPENDATA&#x2f;CORE&#x2f;PROMOCIONES&#x2f;IADAATPA</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+         <slaveserver><name>localhost</name><hostname>localhost</hostname><port>8888</port><webAppName/><username/><password>Encrypted </password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master><sslMode>N</sslMode></slaveserver>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2018&#x2f;05&#x2f;15 12&#x3a;21&#x3a;52.000</created_date>
+  <modified_user>admin</modified_user>
+  <modified_date>2018&#x2f;07&#x2f;10 11&#x3a;54&#x3a;20.000</modified_date>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+  <hop> <from>Get rows from result</from><to>get_vars</to><enabled>Y</enabled> </hop>
+  <hop> <from>get_vars</from><to>translate_rest_call</to><enabled>Y</enabled> </hop>
+  <hop> <from>translate_rest_call</from><to>get_translated_json</to><enabled>Y</enabled> </hop>
+  <hop> <from>get_translated_json</from><to>js_form_translated_values</to><enabled>Y</enabled> </hop>
+  <hop> <from>js_form_translated_values</from><to>set_json_var</to><enabled>Y</enabled> </hop>
+  <hop> <from>set_json_var</from><to>Copy rows to result</to><enabled>Y</enabled> </hop>
+  <hop> <from>translate_rest_call</from><to>log_translate_rest_call</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Copy rows to result</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>928</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get rows from result</name>
+    <type>RowsFromResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>json_to_translate</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>112</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get_translated_json</name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>N</ignoreMissingPath>
+    <rownum_field/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>translated_segments</name>
+        <path>&#x24;.data.segments</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField>result_translate</valueField>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>496</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get_vars</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>url_translate</name>
+        <variable>&#x24;&#x7b;url_translate&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>langs</name>
+        <variable>&#x24;&#x7b;languages&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>ckan_api_url</name>
+        <variable>&#x24;&#x7b;ckan_api_url&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>traducciones</name>
+        <variable>&#x24;&#x7b;traducciones&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>ckan_api_key</name>
+        <variable>&#x24;&#x7b;ckan_api_key&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>240</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js_form_translated_values</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var url_update &#x3d; ckan_api_url &#x2b; traducciones&#x3b;&#xd;&#xa;var api_key &#x3d; ckan_api_key&#x3b;&#xd;&#xa;var langs_split &#x3d; langs.split&#x28;&#x22;-&#x22;&#x29;&#x3b;&#xd;&#xa;var trg_lang &#x3d; langs_split&#x5b;1&#x5d;&#x3b;&#xd;&#xa;var translated_dicts &#x3d; eval&#x28;&#x27;&#x28;&#x27; &#x2b; translated_segments &#x2b; &#x27;&#x29;&#x27;&#x29;&#x3b;&#xd;&#xa;var json &#x3d; &#x22;&#x7b;&#x5c;&#x22;data&#x5c;&#x22;&#x3a; &#x5b;&#x22;&#x3b;&#xd;&#xa;&#xd;&#xa;for &#x28;dict in translated_dicts&#x29;&#x7b;&#xd;&#xa;	var original_term &#x3d; translated_dicts&#x5b;dict&#x5d;&#x5b;&#x22;segment&#x22;&#x5d;&#x3b;&#xd;&#xa;	for&#x28;var j &#x3d; 0&#x3b; j &#x3c; original_term.length&#x3b; j&#x2b;&#x2b;&#x29; &#x7b;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xe1;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xe1;&#x22;, &#x22;a&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xe0;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xe0;&#x22;, &#x22;a&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xe9;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xe9;&#x22;, &#x22;e&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xe8;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xe8;&#x22;, &#x22;e&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xed;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xed;&#x22;, &#x22;i&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xec;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xec;&#x22;, &#x22;i&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xf2;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xf2;&#x22;, &#x22;o&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xf3;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xf3;&#x22;, &#x22;o&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xfa;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xfa;&#x22;, &#x22;u&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xf9;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xf9;&#x22;, &#x22;u&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xc1;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xc1;&#x22;, &#x22;A&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xc0;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xc0;&#x22;, &#x22;A&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xc9;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xc9;&#x22;, &#x22;E&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xc8;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xc8;&#x22;, &#x22;E&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xcd;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xcd;&#x22;, &#x22;I&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xcc;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xcc;&#x22;, &#x22;I&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xd3;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xd3;&#x22;, &#x22;O&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xd2;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xd2;&#x22;, &#x22;O&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xda;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xda;&#x22;, &#x22;U&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xd9;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xd9;&#x22;, &#x22;U&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xd1;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xd1;&#x22;, &#x22;N&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xf1;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xf1;&#x22;, &#x22;n&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xc7;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xc7;&#x22;, &#x22;C&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;		if&#x28;original_term.charAt&#x28;j&#x29;&#x3d;&#x3d;&#x22;&#xe7;&#x22;&#x29;&#x7b;original_term &#x3d; original_term.replace&#x28;&#x22;&#xe7;&#x22;, &#x22;c&#x22;&#x29;&#x3b;&#x7d;&#xd;&#xa;	&#x7d;&#xd;&#xa;	json &#x2b;&#x3d; &#x22;&#x7b;&#x5c;&#x22;term&#x5c;&#x22;&#x3a; &#x5c;&#x22;&#x22; &#x2b; original_term &#x2b; &#x22;&#x5c;&#x22;,&#x5c;&#x22;term_translation&#x5c;&#x22;&#x3a; &#x5c;&#x22;&#x22; &#x2b; translated_dicts&#x5b;dict&#x5d;&#x5b;&#x22;translation&#x22;&#x5d; &#x2b; &#x22;&#x5c;&#x22;,&#x5c;&#x22;lang_code&#x5c;&#x22;&#x3a; &#x5c;&#x22;&#x22; &#x2b; trg_lang &#x2b; &#x22;&#x5c;&#x22;&#x7d;,&#x22;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f; Delete the last appearence of the delimiter&#xd;&#xa;if &#x28;json.substr&#x28;json.length - 1&#x29; &#x3d;&#x3d; &#x22;,&#x22;&#x29;&#x7b;&#xd;&#xa;	json &#x3d; json.substr&#x28;0, json.length - 1&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;json &#x2b;&#x3d; &#x22;&#x5d;&#x7d;&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>json</name>
+        <rename>json</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>url_update</name>
+        <rename>url_update</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>api_key</name>
+        <rename>api_key</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>log_translate_rest_call</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage>&#x2a;&#x2a;&#x2a;&#x2a; TRANSLATE REST CALL &#x2a;&#x2a;&#x2a;&#x2a;</logmessage>
+    <fields>
+      <field>
+        <name>result_translate</name>
+        </field>
+      <field>
+        <name>result_code_translate</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>set_json_var</name>
+    <type>SetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <field_name>json</field_name>
+        <variable_name>json</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>url_update</field_name>
+        <variable_name>url_update</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>ckan_api_key</field_name>
+        <variable_name>api_key</variable_name>
+        <variable_type>ROOT_JOB</variable_type>
+        <default_value/>
+        </field>
+      </fields>
+    <use_formatting>Y</use_formatting>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>translate_rest_call</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <applicationType>JSON</applicationType>
+    <method>POST</method>
+    <url/>
+    <urlInField>Y</urlInField>
+    <dynamicMethod>N</dynamicMethod>
+    <methodFieldName/>
+    <urlField>url_translate</urlField>
+    <bodyField>json_to_translate</bodyField>
+    <httpLogin/>
+    <httpPassword>Encrypted </httpPassword>
+    <proxyHost/>
+    <proxyPort/>
+    <preemptive>N</preemptive>
+    <trustStoreFile/>
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <headers>
+      </headers>
+    <parameters>
+      </parameters>
+    <matrixParameters>
+      </matrixParameters>
+    <result>
+      <name>result_translate</name>
+      <code>result_code_translate</code>
+      <response_time/>
+      </result>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
